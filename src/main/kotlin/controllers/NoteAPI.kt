@@ -107,6 +107,10 @@ fun numberOfNotesByPriority(): Int {
     //helper method to determine how many notes there are of a specific priority
 }
 
-
+fun deleteNote(indexToDelete: Int): Note? {
+    return if (isValidListIndex(indexToDelete, notes)) {
+        notes.removeAt(indexToDelete)
+    } else null
+}
 
 
