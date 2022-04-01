@@ -1,12 +1,15 @@
 package controllers
 
+
 import models.Note
+
 
 private var notes = ArrayList<Note>()
 class NoteAPI {
     fun add(note: Note): Boolean {
         return notes.add(note)
     }
+
     fun numberOfNotes(): Int {
         return notes.size
     }
@@ -21,5 +24,8 @@ class NoteAPI {
     fun isValidListIndex(index: Int, list: List<Any>): Boolean {
         return (index >= 0 && index < list.size)
     }
+}
+
+
 }
 
